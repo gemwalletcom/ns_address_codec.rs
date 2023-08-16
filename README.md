@@ -1,7 +1,9 @@
-# Address/Account codec library mainly for Naming Services in Rust
+## ns_address_code
 
-## Features
+Address/Account codec library mainly for Naming Services in Rust
 
-- ERC-2304 compatible
-- TON raw / friendly address
-- Hex / Base58 / Base32 / Bech32
+### Features
+
+- [x] TON raw / friendly address
+- [ ] ERC-2304 compatible
+- [ ] Hex / Base58 / Base32 / Bech32
