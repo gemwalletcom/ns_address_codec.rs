@@ -2,9 +2,9 @@ use ton_smart_contract_address::{RawAddress, UserFriendlyAddress, UserFriendlyFl
 
 use crate::codec::Codec;
 
-pub struct TON {}
+pub struct TonCodec {}
 
-impl Codec for TON {
+impl Codec for TonCodec {
     fn decode(string: &str) -> Vec<u8> {
         let r = UserFriendlyAddress::from_user_friendly_str(string);
         match r {
@@ -41,7 +41,7 @@ mod tests {
     #[test]
     fn test_encode() {
         let raw = "0:8e874b7ad9bbebbfc48810b8939c98f50580246f19982040dbcb253c4c3daf78";
-        let address = TON::encode(raw.as_bytes().to_vec());
+        let address = TonCodec::encode(raw.as_bytes().to_vec());
 
         assert_eq!(address, "EQCOh0t62bvrv8SIELiTnJj1BYAkbxmYIEDbyyU8TD2veND8");
     }
@@ -49,7 +49,7 @@ mod tests {
     #[test]
     fn test_decode() {
         let string = "EQCOh0t62bvrv8SIELiTnJj1BYAkbxmYIEDbyyU8TD2veND8";
-        let bytes = TON::decode(string);
+        let bytes = TonCodec::decode(string);
 
         assert_eq!(hex::encode(bytes), "8e874b7ad9bbebbfc48810b8939c98f50580246f19982040dbcb253c4c3daf78");
     }

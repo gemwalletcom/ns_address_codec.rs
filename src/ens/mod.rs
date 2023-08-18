@@ -1,1 +1,1 @@
-pub struct ENS {}
+pub struct EnsCodec {}
