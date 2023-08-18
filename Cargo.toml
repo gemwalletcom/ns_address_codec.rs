@@ -1,5 +1,5 @@
 [package]
-name = "naming_address_codec"
+name = "ns_address_codec"
 version = "0.1.0"
 edition = "2021"
 
