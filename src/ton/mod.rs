@@ -2,7 +2,7 @@ use ton_smart_contract_address::{RawAddress, UserFriendlyAddress, UserFriendlyFl
 
 use crate::codec::Codec;
 
-struct TON {}
+pub struct TON {}
 
 impl Codec for TON {
     fn decode(string: &str) -> Vec<u8> {

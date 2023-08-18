@@ -1,1 +1,1 @@
-struct ENS {}
+pub struct ENS {}
